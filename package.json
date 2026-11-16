@@ -1,0 +1,22 @@
+{
+  "name": "velodroma",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Velodroma - Strava meets MyWhoosh: social fitness tracking and virtual cycling platform",
+  "workspaces": [
+    "src/server",
+    "src/client/web",
+    "src/shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm --workspace src/server run dev",
+    "dev:web": "npm --workspace src/client/web run dev",
+    "build": "npm --workspace src/shared run build && npm --workspace src/server run build && npm --workspace src/client/web run build",
+    "start": "npm --workspace src/server run start",
+    "test": "npm --workspace src/server run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

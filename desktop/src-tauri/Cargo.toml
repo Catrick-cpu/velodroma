@@ -1,0 +1,22 @@
+[package]
+name = "velodroma"
+version = "1.0.0"
+edition = "2021"
+description = "Velodroma — virtual cycling + social fitness"
+license = "MIT"
+
+[lib]
+name = "velodroma_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

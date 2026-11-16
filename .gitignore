@@ -1,0 +1,31 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+src/server/data/*.db
+src/server/data/*.db-*
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vite/
+coverage/
+.import/
+.godot/
+*.import
+
+# Local dev database artifacts (server defaults to ./data when
+# VELODROMA_DATA_DIR is unset)
+data/
+
+# Licensed NYC assets (CGTrader Royalty Free — must not be redistributed).
+# Add your downloaded files locally:
+#   public/models/nyc/skyline.glb   (optimized via gltf-transform, meshopt)
+#   public/models/nyc/bridge.glb
+src/client/web/public/models/nyc/
+
+# Tauri / Rust build output
+desktop/target/

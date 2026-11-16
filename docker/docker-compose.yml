@@ -1,0 +1,15 @@
+services:
+  velodroma:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8787:8787"
+    environment:
+      - PORT=8787
+      - JWT_SECRET=change-me-in-production
+      - VELODROMA_DATA_DIR=/app/data
+    volumes:
+      - velodroma_data:/app/data
+volumes:
+  velodroma_data:

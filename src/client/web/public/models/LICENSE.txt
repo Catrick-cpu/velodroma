@@ -1,0 +1,7 @@
+Model licenses
+===============
+
+bicycle.glb
+- Source: https://grab3d.com/models/vehicles/bicycle (light version)
+- License: CC0 1.0 Universal (public domain) — https://creativecommons.org/publicdomain/zero/1.0/
+- No attribution required. Used for the player's bike and parked scenery bikes.
